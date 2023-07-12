@@ -1,0 +1,286 @@
+:root {
+    font-size: 62.5%;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+background: linear-gradient(to bottom, #E8D4C8, #EFD6C0);
+;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    margin-top:3%;
+    gap:3em;
+
+    display:flex;
+    
+    flex-direction: column;
+  
+    align-items: center;
+    align-content: center;
+}
+/*background-color: #FDF7F0;*/
+.weather-box{
+    background:rgb(216, 164, 111);
+ 
+    width:60%;
+
+   display:flex;
+   align-items: center;
+   position:relative;
+   justify-content: space-around;
+    height:10vh;
+    min-height:40px;
+    border-radius:0.8em;
+}
+
+#date , #name{
+    color:darkslategray;
+    font-family:'Bebas Neue';
+    letter-spacing:0.1em;
+}
+.todo-box{
+
+    width:60%;
+    
+   
+    background:rgb(237, 233, 229);
+    
+    display: flex;
+    flex-direction: column;
+    gap:1.5em;
+  align-items: center;
+    border-radius:1em;
+    
+}
+.input {
+    margin-top: 2%;
+    display: flex;
+   width:100%;
+   height:40px;
+   gap:2em;
+    justify-content: center;
+    align-items:center;
+}
+input[type="text"]{
+    width:600px;
+    min-width:200px;
+    height:40px;
+    outline:none;
+    padding:0.5em;
+    font-family:hammersmith one;
+    border:2px solid darkgray;
+    border-radius:1em;
+}
+
+.fa-calendar-plus{
+    color:rgb(86, 49, 49);
+    font-size:3.2rem;
+transition:0.3s ease;
+}
+
+.fa-calendar-plus:hover{
+    transform:translateY(-5px)
+}
+.lists{
+    font-family:hammersmith one;
+    align-self: flex-start;
+    margin-left:10%;
+    
+}
+.lists ul li{
+    padding:12px 8px 12px 10px;
+    line-height:1.8em;
+    list-style:circle;
+    cursor:pointer;
+    
+}
+.lists ul li.check{
+text-decoration:line-through;
+color:black;
+}
+.reminder{
+  
+    padding:0.5em;
+   position:absolute;
+    background:gray;
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    gap:2em;
+    margin-left:0px;
+    width:580px;
+ display:none;
+
+}
+#closeme{
+    background:black;
+    color:white;
+    padding:0.5em;
+    outline:none;
+    border:2px solid white;
+
+}
+#sorry{
+margin-top:6px;
+    font-size:1.4rem;
+    font-family: hammersmith one;
+}
+span{
+    position:absolute;
+    margin-top:-2.8%;
+    margin-left:40%;
+    display:flex;
+    gap:1em;
+    
+}
+.fa-check, .fa-xmark{
+    border-radius:50%;
+    padding:1em;
+}
+.fa-check:hover, .fa-xmark:hover{
+   
+background:#88a2d7;
+}
+@media (max-width:1036px){
+    input[type="text"]{
+        width:400px;
+    }
+    span{
+        margin-top:-4%;
+    }
+}
+@media(max-width:990px){
+   
+    span{
+        margin-left:400px;
+        margin-top:-40px;
+    }
+    .reminder{
+        width:600px;
+
+    }
+}
+@media(max-width:946px){
+
+    .weather-box{
+        width:550px;
+    }
+    .todo-box{
+        width:550px;
+    }
+    span{
+        margin-left:380px;
+    }
+    .reminder{
+        width:400px;
+  
+        
+    }
+}
+
+@media(max-width:580px){
+    .weather-box{
+        width:450px;
+    }
+    .todo-box{
+        width:450px;
+    }
+    .lists ul li{
+        font-size:1.2rem;
+    }
+    span{
+        margin-left:310px;
+        margin-top:-30px;
+        gap:0em;
+    }
+    input[type="text"]{
+        width:350px;
+    }
+}
+@media(max-width:460px){
+    .weather-box{
+        width:400px;
+    }
+    .todo-box{
+        width:400px;
+    }
+    .reminder{
+        width:350px;
+    }
+    input[type="text"]{
+        width:300px;
+    }
+    span{
+        margin-left:260px;
+        gap:0em;
+    }
+}
+@media(max-width:410px){
+    .weather-box{
+ width:350px;
+ font-size:1.4rem
+    }
+    .todo-box{
+        width:350px;
+    }
+    input[type="text"]{
+        width:250px;
+    }
+    .reminder{
+        width:280px;
+    }
+    span{
+        margin-left:220px;
+        gap:0em;
+    }
+}
+
+@media(max-width:360px){
+    .weather-box{
+ width:320px;
+ font-size:1.2rem
+    }
+    .todo-box{
+        width:320px;
+    }
+    input[type="text"]{
+        width:210px;
+    }
+    .reminder{
+        width:250px;
+    }
+    span{
+        margin-left:195px;
+        gap:0em;
+    }
+}
+@media(max-width:330px){
+    .weather-box{
+ width:300px;
+ font-size:1.2rem
+    }
+    .todo-box{
+        width:300px;
+    }
+    input[type="text"]{
+        width:210px;
+    }
+    span{
+        margin-left:178px;
+        gap:0em;
+    }
+}
